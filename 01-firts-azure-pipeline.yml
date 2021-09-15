@@ -18,7 +18,7 @@ jobs:
     displayName: 'Run a one-line script'
   - script: |
       echo Add other tasks to build, test, and deploy your project
-#      echo See https://aka.ms/yaml
+      echo See https://aka.ms/yaml
     displayName: 'Run a multi-line script'
 
 - job: Secondjob
@@ -28,7 +28,7 @@ jobs:
     displayName: 'Run a one line script'
   - script: |
       echo Run a multiline script
-#      echo www.bhanu.com
+      echo See www.bhanu.com
     displayName: 'Run a multiline script'
 
 - job: Thirdjob
