@@ -19,7 +19,8 @@ jobs:
   - script: |
       echo Add other tasks to build, test, and deploy your project
 #      echo See https://aka.ms/yaml
-      displayName: 'Run a multi-line script'
+       echo more info
+    displayName: 'Run a multi-line script'
 
 - job: SecondJob
   steps:
@@ -28,4 +29,4 @@ jobs:
   - script: |
       echo Run a multiline script
 #      echo www.bhanu.com
-      displayName: 'Run a multiline script'
+    displayName: 'Run a multiline script'
