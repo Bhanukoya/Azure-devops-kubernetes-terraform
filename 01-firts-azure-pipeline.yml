@@ -11,7 +11,7 @@ pool:
 
 # pipelines > stages > jobs > steps(tasks)
 
-Jobs:
+jobs:
 - job: Firstjob
   steps:
   - script: echo First Job!
@@ -20,6 +20,7 @@ Jobs:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
     displayName: 'Run a multi-line script'
+    
 - job: SecondJob
   steps:
   - script: echo Second job!
