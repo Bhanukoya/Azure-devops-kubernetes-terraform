@@ -19,6 +19,7 @@ stages:
   - job: Firstjob
     steps:
     - script: echo $(environment)_firstjob
+    - script: echo $(PipelineLevelVariable)
   - job: Secondjob
     steps:
     - bash: echo $(environment)_secondjob
