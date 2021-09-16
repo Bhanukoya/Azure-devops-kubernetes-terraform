@@ -31,7 +31,7 @@ stages:
   jobs:
   - job: Firstjob
     steps:
-    - script: echo $(environement)_firstjob
+    - script: echo $(environment)_firstjob
   - job: Secondjob
     steps:
     - bash: echo $(environment)_secondjob
@@ -43,7 +43,7 @@ stages:
   jobs:
   - job: Firstjob
     steps:
-    - script: echo $(environement)_firstjob
+    - script: echo $(environment)_firstjob
   - job: Secondjob
     steps:
-    - bash: echo $(environement)_secondjob
+    - bash: echo $(environment)_secondjob
