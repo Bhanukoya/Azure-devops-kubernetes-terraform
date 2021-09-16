@@ -17,13 +17,13 @@ stages:
   - job: B_Firstjob
     steps:
     - bash echo B_Firstjob
- #   displayName "Run one line script"
+    displayName: "Run one line script"
   - job: B_Secondjob
     dependsOn: B_Firstjob
     steps:
     - bash echo B_Secondjob
     - script echo See www.azure.com
-    displayName "Run multi line script"
+    displayName: "Run multi line script"
 
 - stage: Devstage
   dependsOn: Buildstage
