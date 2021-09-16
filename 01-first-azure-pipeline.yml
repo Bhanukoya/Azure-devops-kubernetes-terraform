@@ -37,7 +37,7 @@ stages:
     - bash: echo D_Secondjob  
 
 - stage: QAstage
-  dependsOn: Devstage
+  dependsOn: Buildstage
   jobs:
   - job: Q_Firstjob
     steps:
