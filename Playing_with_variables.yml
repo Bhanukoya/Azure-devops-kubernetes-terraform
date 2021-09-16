@@ -9,7 +9,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-Pipelines > stages > jobs > steps(tasks)
+#Pipelines > stages > jobs > steps(tasks)
 
 stages:
 - stage: Buildstage
