@@ -25,12 +25,29 @@ stages:
     - bash: echo $(Build.SourceVersion)
     - bash: echo $(Build.BuildUri)
     - bash: echo $(System.DefaultWorkingDirectory)
-    - bash: echo ls -R $(System.DefaultWorkingDerectory)
+    - bash: ls -R $(System.DefaultWorkingDerectory)
     - bash: echo $(Build.ArtifactStagingDirectory)
     - bash: java -version
     - bash: python --version
     - bash: mvn --version
     - bash: node --version
     displayName: 'Run a one-line script'
+    
+    - bash: ls -R $(System.ArtifactStagingDirectory)
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '$(System.DefaultWorkingDirectory)'
+        Contents: |
+          **/*.yml
+          **/*tf
+        TargetFolder: '$(System.ArtifactStagingDirectory)'
+
+    - bash: echo ls -R $(System.ArtifactStagingDirectory)  
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
 
 
