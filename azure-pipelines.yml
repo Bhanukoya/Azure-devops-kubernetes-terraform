@@ -12,7 +12,7 @@ pool:
 # pipelines > stages > jobs > steps (tasks)
 
 stages:
-- stage: Buildstage
+- stage: Build
   jobs:
   - job: Firstjob
     steps:
@@ -27,10 +27,10 @@ stages:
     - bash: echo $(System.DefaultWorkingDirectory)
     - bash: echo ls -R $(System.DefaultWorkingDerectory)
     - bash: echo $(Build.ArtifactStagingDirectory)
-    - bash: echo java -version
-    - bash: echo python --version
-    - bash: echo mvn --version
-    - bash: echo node --version
+    - bash: java -version
+    - bash: python --version
+    - bash: mvn --version
+    - bash: node --version
     displayName: 'Run a one-line script'
 
 
