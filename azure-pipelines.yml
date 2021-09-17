@@ -17,7 +17,6 @@ stages:
   - job: Firstjob
     steps:
     - script: echo Build Firstjob!
-    displayName: 'Run a one-line script'
     - bash: echo $(PipelineLevelVariable)
     - bash: echo $(Build.BuildID)
     - bash: echo $(Build.BuildNumber)
@@ -46,5 +45,7 @@ stages:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'drop'
         publishLocation: 'Container'
+    displayName: "Run a one-line script"
+
 
 
