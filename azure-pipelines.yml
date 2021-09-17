@@ -17,6 +17,7 @@ stages:
   - job: Firstjob
     steps:
     - script: echo Build Firstjob!
+    displayName: 'Run a one-line script'
     - bash: echo $(PipelineLevelVariable)
     - bash: echo $(Build.BuildID)
     - bash: echo $(Build.BuildNumber)
@@ -31,7 +32,6 @@ stages:
     - bash: python --version
     - bash: mvn --version
     - bash: node --version
- #   displayName: 'Run a one-line script'
     - bash: ls -R $(System.ArtifactStagingDirectory)
     - task: CopyFiles@2
       inputs:
