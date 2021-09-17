@@ -18,8 +18,8 @@ stages:
     steps:
     - script: echo Build Firstjob!
     - bash: echo $(PipelineLevelVariable)
-    - bash: echo $(Buildstage.BuildID)
-    - bash: echo $(Build.BuildNo)
+    - bash: echo $(Build.BuildID)
+    - bash: echo $(Build.BuildNumber)
     - bash: echo $(Build.SourceBranchName)
     - bash: echo $(Build.SourcesDirectory)
     - bash: echo $(Build.SourceVersion)
