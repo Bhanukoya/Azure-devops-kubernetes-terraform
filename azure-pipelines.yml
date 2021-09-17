@@ -32,7 +32,6 @@ stages:
     - bash: mvn --version
     - bash: node --version
     displayName: 'Run a one-line script'
-    
     - bash: ls -R $(System.ArtifactStagingDirectory)
     - task: CopyFiles@2
       inputs:
@@ -41,9 +40,7 @@ stages:
           **/*.yml
           **/*tf
         TargetFolder: '$(System.ArtifactStagingDirectory)'
-
     - bash: echo ls -R $(System.ArtifactStagingDirectory)  
-
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
