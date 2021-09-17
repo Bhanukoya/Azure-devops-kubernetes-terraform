@@ -31,8 +31,8 @@ stages:
     - bash: python --version
     - bash: mvn --version
     - bash: node --version
-    displayName: 'Run a one-line script'
- #   - bash: ls -R $(System.ArtifactStagingDirectory)
+ #   displayName: 'Run a one-line script'
+    - bash: ls -R $(System.ArtifactStagingDirectory)
     - task: CopyFiles@2
       inputs:
         SourceFolder: '$(System.DefaultWorkingDirectory)'
