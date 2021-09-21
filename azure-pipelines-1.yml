@@ -22,17 +22,17 @@ stages:
     bash: echo Deploy to Dev (D_firstjob)   
    displayName: "Run a one-line script" 
 
-  deployment: Devdeployjob
-  environment: Dev
-  strategy:
-   runOnce:
-    deploy:
-     steps:
-      bash: Do the Deploy (D_delpoyment)
+  - deployment: Devdeployjob
+   environment: Dev
+   strategy:
+    runOnce:
+     deploy:
+      steps:
+       bash: Do the Deploy (D_delpoyment)
 
  - stage: QA
   jobs:
-   deployment:
+   - deployment:
    environment: QA
    strategy:
     runOnce:
