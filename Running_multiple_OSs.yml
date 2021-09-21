@@ -9,7 +9,7 @@ trigger:
 strategy:
  matrix:
   linux:
-   operatingsystem: 'ununtu-latest'
+   operatingsystem: 'ubuntu-latest'
   mac:
    operatingsystem: 'macos-latest' 
 
