@@ -15,7 +15,7 @@ stages:
   - job: firstjob
     steps:
      script: echo Do the build (B_firstjob)
-    displayName: "Run a one-line script ""
+    displayName: "Run a one-line script "
 
 - stage: Devdeploy
   jobs: 
