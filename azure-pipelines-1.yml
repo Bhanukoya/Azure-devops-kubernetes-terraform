@@ -13,17 +13,21 @@ pool:
 
 stages:
 - stage: Buildstage
+  variables:
+   environment: Building
   jobs:
   - job: firstjob
     steps:
-    - bash: echo "Do the build (B_firstjob)"
+    - bash: echo "Do the $(environment) (B_firstjob)"
     displayName: "Run a one-line script"
 
 - stage: Devdeploy
+  variables:
+   environment: Development
   jobs: 
   - job: firstjob
     steps:
-    - bash: echo "Deploy to Dev (D_firstjob)"
+    - bash: echo "Deploy to $(environment) (D_firstjob)"
     displayName: "Run a one-line script" 
 
   - deployment: Devdeployjob
@@ -32,9 +36,11 @@ stages:
      runOnce:
       deploy:
        steps:
-       - bash: echo "Do the Deploy (D_delpoyment)"
+       - bash: echo "Do the $(environment) (D_delpoyment)"
 
 - stage: QA
+  variables: 
+   environment: Quality Automation
   jobs:
   - deployment: QAdeployjob
     environment: QA
@@ -42,7 +48,7 @@ stages:
      runOnce:
       deploy:
        steps:
-       - script: echo "Do the QA (QA_deployment)"
+       - script: echo "Do the $(environment) (QA_deployment)"
 
 
 
