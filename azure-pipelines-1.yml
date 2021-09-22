@@ -14,16 +14,15 @@ stages:
   jobs:
   - job: firstjob
     steps:
-    - script: echo Do the build (B_firstjob)
+    - bash: echo "Do the build (B_firstjob)""
     displayName: "Run a one-line script "
 
 - stage: Devdeploy
   jobs: 
   - job: firstjob
     steps:
-    - bash: echo Deploy to Dev (D_firstjob)   
+    - bash: echo "Deploy to Dev (D_firstjob)""
     displayName: "Run a one-line script" 
-
 
   - deployment: Devdeployjob
     environment: Dev
@@ -31,7 +30,7 @@ stages:
      runOnce:
       deploy:
        steps:
-       - bash: Do the Deploy (D_delpoyment)
+       - bash: echo "Do the Deploy (D_delpoyment)""
 
 - stage: QA
   jobs:
@@ -41,7 +40,7 @@ stages:
      runOnce:
       deploy:
        steps:
-       - bash: Do the QA (QA_deployment)
+       - script: echo "Do the QA (QA_deployment)
 
 
 
