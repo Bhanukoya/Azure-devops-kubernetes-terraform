@@ -33,11 +33,11 @@ stages:
        steps:
         bash: Do the Deploy (D_delpoyment)
 
- - stage: QA
-   jobs:
-   - deployment: QAdeployjob
-     environment: QA
-     strategy:
+- stage: QA
+  jobs:
+  - deployment: QAdeployjob
+    environment: QA
+    strategy:
      runOnce:
       deploy:
        steps:
