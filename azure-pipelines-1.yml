@@ -40,7 +40,7 @@ stages:
 
 - stage: QA
   variables: 
-   environment: Quality Automation
+   environment: Quality Assurance
   jobs:
   - deployment: QAdeployjob
     environment: QA
